@@ -198,8 +198,10 @@ section { padding-block: clamp(3.5rem, 7vw, 6rem); }
 .menu-btn { display: none; width: 42px; height: 42px; border-radius: 999px; border: 0; cursor: pointer; background: rgba(255,255,255,.04); box-shadow: 0 0 0 1px var(--line-strong) inset; color: var(--text); place-items: center; }
 .menu-btn svg { width: 20px; height: 20px; }
 @media (max-width: 980px) {
-  .menu-btn { display: grid; }
-  .nav .bar { flex-wrap: wrap; border-radius: 28px; }
+  .menu-btn { display: grid; flex: none; }
+  .nav .bar { flex-wrap: nowrap; gap: 0.5rem; }
+  .nav .logo { margin-right: auto; }
+  .nav.open .bar { flex-wrap: wrap; border-radius: 28px; }
   .nav nav { gap: 0.6rem; }
   .nav.open nav { width: 100%; order: 3; flex-direction: column; align-items: stretch; padding: 0.4rem 0.4rem 0.6rem; }
   .nav.open nav a:not(.btn) { display: block; padding: 0.6rem 0.4rem; border-top: 1px solid var(--line); }

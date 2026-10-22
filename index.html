@@ -144,6 +144,48 @@ section { padding-block: clamp(4.5rem, 9vw, 7.5rem); }
 @media (max-width: 960px) { .services { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 600px) { .services { grid-template-columns: minmax(0, 1fr); } }
 
+/* Client work */
+.work { display: grid; gap: 1.4rem; }
+.project { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 0; padding: 0; }
+.project:hover { transform: translateY(-3px); }
+.project.flip .shot { order: 2; }
+@media (max-width: 860px) { .project { grid-template-columns: minmax(0, 1fr); } .project.flip .shot { order: 0; } }
+.shot { position: relative; min-height: 18rem; background: #050A0C; border-right: 1px solid var(--line); overflow: hidden; }
+.project.flip .shot { border-right: 0; border-left: 1px solid var(--line); }
+@media (max-width: 860px) { .shot, .project.flip .shot { border: 0; border-bottom: 1px solid var(--line); } }
+.browser { position: absolute; inset: 1.4rem 1.4rem 0 1.4rem; border-radius: 12px 12px 0 0; overflow: hidden; box-shadow: 0 0 0 1px var(--line-strong), 0 30px 60px -20px rgba(0,0,0,.9); background: #0B1114; }
+.browser-bar { display: flex; align-items: center; gap: 6px; padding: 0.55rem 0.8rem; background: #111A1E; font-family: var(--mono); font-size: 0.68rem; color: var(--dim); }
+.browser-bar i { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,.14); }
+.browser-bar span { margin-left: 0.6rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.browser img { display: block; width: 100%; height: auto; transition: transform .6s ease; }
+.project:hover .browser img { transform: scale(1.03); }
+.project-body { padding: clamp(1.5rem, 3vw, 2.4rem); display: grid; gap: 1rem; align-content: center; min-width: 0; }
+.client { font-family: var(--mono); font-size: 0.74rem; letter-spacing: .12em; text-transform: uppercase; color: var(--cy); }
+.project-body h3 { font-size: clamp(1.3rem, 2.4vw, 1.75rem); }
+.project-body > p { color: var(--dim); }
+.built { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.55rem; font-size: 0.96rem; }
+.built li { display: flex; gap: 0.6rem; }
+.built li::before { content: "↳"; color: var(--em); font-family: var(--mono); }
+.tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.tags span { font-family: var(--mono); font-size: 0.72rem; padding: 0.25rem 0.6rem; border-radius: 999px; background: rgba(255,255,255,.04); box-shadow: 0 0 0 1px var(--line) inset; }
+.visit { display: inline-flex; align-items: center; gap: 0.45rem; font-weight: 700; color: var(--em); text-decoration: none; justify-self: start; }
+.visit:hover { text-decoration: underline; }
+/* RM Pro: drawn dashboard illustration */
+.dash { position: absolute; inset: 1.4rem 1.4rem 0 1.4rem; display: grid; grid-template-columns: 22% 1fr; border-radius: 12px 12px 0 0; overflow: hidden; background: #0B1114; box-shadow: 0 0 0 1px var(--line-strong), 0 30px 60px -20px rgba(0,0,0,.9); }
+.dash-side { background: #0E171B; border-right: 1px solid var(--line); padding: 1rem 0.8rem; display: grid; gap: 0.6rem; align-content: start; }
+.dash-side b { font-family: var(--display); font-size: 0.8rem; margin-bottom: 0.4rem; }
+.dash-side i { height: 8px; border-radius: 4px; background: rgba(255,255,255,.08); }
+.dash-side i.on { background: var(--grad); }
+.dash-main { padding: 1rem; display: grid; gap: 0.8rem; align-content: start; min-width: 0; }
+.kpis { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.6rem; }
+.kpi { border-radius: 10px; padding: 0.6rem; background: rgba(255,255,255,.03); box-shadow: 0 0 0 1px var(--line) inset; display: grid; gap: 0.4rem; }
+.kpi i { height: 6px; width: 50%; border-radius: 3px; background: rgba(255,255,255,.1); }
+.kpi b { height: 14px; width: 70%; border-radius: 4px; background: var(--grad); opacity: .85; }
+.chart { height: 7.5rem; border-radius: 10px; background: rgba(255,255,255,.03); box-shadow: 0 0 0 1px var(--line) inset; display: flex; align-items: flex-end; gap: 6%; padding: 0.8rem; }
+.chart i { flex: 1; border-radius: 4px 4px 0 0; background: linear-gradient(180deg, var(--cy), rgba(54,242,160,.35)); }
+.rows { display: grid; gap: 0.45rem; }
+.rows i { height: 10px; border-radius: 4px; background: rgba(255,255,255,.06); }
+
 /* Workflow console */
 .split { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
 .split .head { margin-bottom: 0; }
@@ -249,6 +291,7 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
     </a>
     <nav aria-label="Main">
       <a href="#services">Services</a>
+      <a href="#work">Our work</a>
       <a href="#workflow">Automation</a>
       <a href="#process">Process</a>
       <a href="#packages">Packages</a>
@@ -327,6 +370,64 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
           <h3>AI tools &amp; dashboards</h3>
           <p>Custom internal apps and live reports that show what's happening across the business.</p>
           <ul><li>dashboards</li><li>doc extraction</li><li>custom apps</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" aria-labelledby="work-title">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Our work</span>
+        <h2 id="work-title">Built by Roots, <span class="grad">running for real clients.</span></h2>
+        <p>A look at projects we've designed and launched for businesses.</p>
+      </div>
+      <div class="work">
+        <article class="card project">
+          <div class="shot">
+            <div class="browser">
+              <div class="browser-bar"><i></i><i></i><i></i><span>ajmobiledetailing.co</span></div>
+              <img src="img/work-ajs.jpg" width="800" height="600" loading="lazy" alt="Homepage of the AJ's Auto Detailing website: 'That new car feeling. All over again.' with two detailers working on a grey sports car">
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="client">Client · Mobile car detailing · Yolo County, CA</span>
+            <h3>AJ's Auto Detailing</h3>
+            <p>A premium website for a mobile detailing business that comes to the customer's driveway. Built to show off the work, make pricing easy to understand and turn visitors into quote requests.</p>
+            <ul class="built">
+              <li>Package pricing that switches between car and SUV</li>
+              <li>Add-on services like ceramic coating and paint polish</li>
+              <li>Quote request form that goes straight to the owner</li>
+              <li>Mobile-first design on the client's own domain</li>
+            </ul>
+            <div class="tags"><span>website</span><span>lead capture</span><span>custom domain</span></div>
+            <a class="visit" href="https://www.ajmobiledetailing.co" target="_blank" rel="noopener">Visit the live site
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+          </div>
+        </article>
+
+        <article class="card project flip">
+          <div class="shot">
+            <div class="dash" role="img" aria-label="Illustration of the RM Pro dashboard layout">
+              <div class="dash-side"><b class="grad">RM Pro</b><i class="on"></i><i></i><i></i><i></i><i></i></div>
+              <div class="dash-main">
+                <div class="kpis"><div class="kpi"><i></i><b></b></div><div class="kpi"><i></i><b></b></div><div class="kpi"><i></i><b></b></div></div>
+                <div class="chart"><i style="height:40%"></i><i style="height:65%"></i><i style="height:50%"></i><i style="height:80%"></i><i style="height:60%"></i><i style="height:95%"></i><i style="height:75%"></i></div>
+                <div class="rows"><i></i><i style="width:85%"></i><i style="width:70%"></i></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="client">Client · Custom software</span>
+            <h3>RM Pro</h3>
+            <p>A custom app and dashboard we built for a client, so their team can run day-to-day work from one place instead of juggling spreadsheets and separate tools.</p>
+            <ul class="built">
+              <li>Designed around the client's own workflow</li>
+              <li>Key numbers visible at a glance</li>
+              <li>Built and launched by Roots from start to finish</li>
+            </ul>
+            <div class="tags"><span>custom app</span><span>dashboard</span><span>internal tool</span></div>
+          </div>
         </article>
       </div>
     </div>

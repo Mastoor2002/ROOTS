@@ -170,22 +170,6 @@ section { padding-block: clamp(4.5rem, 9vw, 7.5rem); }
 .tags span { font-family: var(--mono); font-size: 0.72rem; padding: 0.25rem 0.6rem; border-radius: 999px; background: rgba(255,255,255,.04); box-shadow: 0 0 0 1px var(--line) inset; }
 .visit { display: inline-flex; align-items: center; gap: 0.45rem; font-weight: 700; color: var(--em); text-decoration: none; justify-self: start; }
 .visit:hover { text-decoration: underline; }
-/* RM Pro: drawn dashboard illustration */
-.dash { position: absolute; inset: 1.4rem 1.4rem 0 1.4rem; display: grid; grid-template-columns: 22% 1fr; border-radius: 12px 12px 0 0; overflow: hidden; background: #0B1114; box-shadow: 0 0 0 1px var(--line-strong), 0 30px 60px -20px rgba(0,0,0,.9); }
-.dash-side { background: #0E171B; border-right: 1px solid var(--line); padding: 1rem 0.8rem; display: grid; gap: 0.6rem; align-content: start; }
-.dash-side b { font-family: var(--display); font-size: 0.8rem; margin-bottom: 0.4rem; }
-.dash-side i { height: 8px; border-radius: 4px; background: rgba(255,255,255,.08); }
-.dash-side i.on { background: var(--grad); }
-.dash-main { padding: 1rem; display: grid; gap: 0.8rem; align-content: start; min-width: 0; }
-.kpis { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.6rem; }
-.kpi { border-radius: 10px; padding: 0.6rem; background: rgba(255,255,255,.03); box-shadow: 0 0 0 1px var(--line) inset; display: grid; gap: 0.4rem; }
-.kpi i { height: 6px; width: 50%; border-radius: 3px; background: rgba(255,255,255,.1); }
-.kpi b { height: 14px; width: 70%; border-radius: 4px; background: var(--grad); opacity: .85; }
-.chart { height: 7.5rem; border-radius: 10px; background: rgba(255,255,255,.03); box-shadow: 0 0 0 1px var(--line) inset; display: flex; align-items: flex-end; gap: 6%; padding: 0.8rem; }
-.chart i { flex: 1; border-radius: 4px 4px 0 0; background: linear-gradient(180deg, var(--cy), rgba(54,242,160,.35)); }
-.rows { display: grid; gap: 0.45rem; }
-.rows i { height: 10px; border-radius: 4px; background: rgba(255,255,255,.06); }
-
 /* Workflow console */
 .split { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
 .split .head { margin-bottom: 0; }
@@ -408,25 +392,22 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
 
         <article class="card project flip">
           <div class="shot">
-            <div class="dash" role="img" aria-label="Illustration of the RM Pro dashboard layout">
-              <div class="dash-side"><b class="grad">RM Pro</b><i class="on"></i><i></i><i></i><i></i><i></i></div>
-              <div class="dash-main">
-                <div class="kpis"><div class="kpi"><i></i><b></b></div><div class="kpi"><i></i><b></b></div><div class="kpi"><i></i><b></b></div></div>
-                <div class="chart"><i style="height:40%"></i><i style="height:65%"></i><i style="height:50%"></i><i style="height:80%"></i><i style="height:60%"></i><i style="height:95%"></i><i style="height:75%"></i></div>
-                <div class="rows"><i></i><i style="width:85%"></i><i style="width:70%"></i></div>
-              </div>
+            <div class="browser">
+              <div class="browser-bar"><i></i><i></i><i></i><span>RM Pro · concept visual</span></div>
+              <img src="img/work-rmpro.jpg" width="1168" height="880" loading="lazy" alt="Concept visual of the RM Pro dashboard: open and resolved issue counts across stores, a table of issues flagged by store managers, and an AI panel answering a question about a fryer's repair history">
             </div>
           </div>
           <div class="project-body">
-            <span class="client">Client · Custom software</span>
+            <span class="client">Client · Multi-location food stores</span>
             <h3>RM Pro</h3>
-            <p>A custom app and dashboard we built for a client, so their team can run day-to-day work from one place instead of juggling spreadsheets and separate tools.</p>
+            <p>Repair and management software for a group of food stores. Everyone in the hierarchy, from store managers up to head office, sees what's happening in every store, in real time.</p>
             <ul class="built">
-              <li>Designed around the client's own workflow</li>
-              <li>Key numbers visible at a glance</li>
-              <li>Built and launched by Roots from start to finish</li>
+              <li>Store managers flag equipment issues the moment they happen</li>
+              <li>Issues are tracked until resolved, then cleared from the board</li>
+              <li>Each level of the hierarchy sees the stores it's responsible for</li>
+              <li>AI machine history (RAG): ask about any machine and get its full repair record</li>
             </ul>
-            <div class="tags"><span>custom app</span><span>dashboard</span><span>internal tool</span></div>
+            <div class="tags"><span>custom software</span><span>RAG / AI search</span><span>multi-store</span><span>dashboard</span></div>
           </div>
         </article>
       </div>

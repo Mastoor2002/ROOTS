@@ -219,21 +219,6 @@ section { padding-block: clamp(3.5rem, 7vw, 6rem); }
 }
 .hp { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; overflow: hidden; }
 
-/* HSC portal recreation */
-.portal { position: relative; flex: 1; min-height: 0; overflow: hidden; }
-.portal > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 70%; }
-.portal-card { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: min(15rem, 72%); padding: 1.1rem 1.1rem 1.2rem; border-radius: 16px;
-  background: #F8FAFC; color: #12305A; display: grid; justify-items: center; gap: 0.35rem; box-shadow: 0 25px 60px -10px rgba(0,0,0,.7); font-family: var(--body); }
-.portal .portal-logo { width: 54px; height: 54px; flex: none; border-radius: 14px; object-fit: contain; transform: none; }
-.portal-card b { font-size: 0.95rem; font-weight: 800; color: #12305A; margin-top: 0.2rem; }
-.portal-card small { font-size: 0.55rem; letter-spacing: .18em; color: #64748B; }
-.portal-tabs { display: grid; grid-template-columns: 1fr 1fr; width: 100%; margin-top: 0.4rem; padding: 3px; border-radius: 9px; background: #E2E8F0; font-size: 0.62rem; font-weight: 700; text-align: center; }
-.portal-tabs span { padding: 0.35rem 0; border-radius: 7px; color: #334155; }
-.portal-tabs span.on { background: #12305A; color: #fff; }
-.portal-card i { display: block; width: 100%; height: 22px; border-radius: 7px; background: #fff; box-shadow: 0 0 0 1px #CBD5E1 inset; margin-top: 0.25rem; }
-.portal-card em { font-style: normal; width: 100%; margin-top: 0.45rem; padding: 0.4rem 0; border-radius: 8px; background: #12305A; color: #fff; font-size: 0.68rem; font-weight: 700; text-align: center; }
-.project:hover .portal > img { transform: scale(1.03); }
-
 /* Workflow console */
 .split { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
 .split .head { margin-bottom: 0; }
@@ -502,18 +487,8 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
         <article class="card project flip">
           <div class="shot">
             <div class="browser">
-              <div class="browser-bar"><i></i><i></i><i></i><span>Houston Squash Club · management portal</span></div>
-              <div class="portal">
-                <img src="img/work-hsc.jpg" width="1000" height="750" loading="lazy" alt="">
-                <div class="portal-card" role="img" aria-label="The Houston Squash Club management portal sign-in screen, with Staff Login and Member Portal tabs">
-                  <img class="portal-logo" src="img/hsc-logo.png" width="180" height="180" alt="">
-                  <b>Houston Squash Club</b>
-                  <small>MANAGEMENT PORTAL</small>
-                  <div class="portal-tabs"><span class="on">Staff Login</span><span>Member Portal</span></div>
-                  <i></i><i></i>
-                  <em>Sign In</em>
-                </div>
-              </div>
+              <div class="browser-bar"><i></i><i></i><i></i><span>Houston Squash Club · revenue dashboard</span></div>
+              <img src="img/work-hsc-dashboard.jpg" width="876" height="768" loading="lazy" alt="The Houston Squash Club owner dashboard: today's revenue, monthly revenue and revenue-by-category charts, with total revenue, transactions and member counts (figures blurred for client privacy)">
             </div>
           </div>
           <div class="project-body">

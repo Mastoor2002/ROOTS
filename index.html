@@ -219,6 +219,10 @@ section { padding-block: clamp(3.5rem, 7vw, 6rem); }
 }
 .hp { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; overflow: hidden; }
 
+/* Full-bleed product shot inside a project card */
+.shot-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform .6s ease; }
+.project:hover .shot-img { transform: scale(1.03); }
+
 /* Workflow console */
 .split { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
 .split .head { margin-bottom: 0; }
@@ -486,10 +490,7 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
 
         <article class="card project flip">
           <div class="shot">
-            <div class="browser">
-              <div class="browser-bar"><i></i><i></i><i></i><span>Houston Squash Club · revenue dashboard</span></div>
-              <img src="img/work-hsc-dashboard.jpg" width="876" height="768" loading="lazy" alt="The Houston Squash Club owner dashboard: today's revenue, monthly revenue and revenue-by-category charts, with total revenue, transactions and member counts (figures blurred for client privacy)">
-            </div>
+            <img class="shot-img" src="img/work-hsc.jpg" width="1168" height="880" loading="lazy" alt="Laptop showing the Houston Squash Club revenue dashboard: revenue summary, member and transaction stats, and monthly and by-category revenue charts (figures blurred for client privacy)">
           </div>
           <div class="project-body">
             <span class="client">Client · Squash club · Houston, TX</span>

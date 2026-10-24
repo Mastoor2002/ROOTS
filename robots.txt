@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://roots-ai-roan.vercel.app/sitemap.xml
+Sitemap: https://www.rootssolution.tech/sitemap.xml

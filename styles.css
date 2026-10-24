@@ -471,3 +471,6 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
   .marquee-track, .pulse { animation: none; }
   .card, .btn { transition: none; }
 }
+
+/* Screenshots whose key content sits in the middle */
+.browser img.pos-center { object-position: center center; transform-origin: center; }

@@ -474,3 +474,9 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
 
 /* Screenshots whose key content sits in the middle */
 .browser img.pos-center { object-position: center center; transform-origin: center; }
+
+/* 404 page */
+.notfound { min-height: 80vh; display: grid; align-content: center; gap: 1.2rem; padding-block: 4rem; }
+.notfound h1 { font-size: clamp(2.2rem, 6vw, 4.2rem); max-width: 14ch; }
+.notfound p { color: var(--dim); max-width: 32rem; }
+.notfound .ctas { display: flex; flex-wrap: wrap; gap: 0.8rem; }

@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://roots-ai-roan.vercel.app/</loc>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image><image:loc>https://roots-ai-roan.vercel.app/img/hero.jpg</image:loc></image:image>
+    <image:image><image:loc>https://roots-ai-roan.vercel.app/img/work-ajs.jpg</image:loc></image:image>
+    <image:image><image:loc>https://roots-ai-roan.vercel.app/img/work-roost.jpg</image:loc></image:image>
+    <image:image><image:loc>https://roots-ai-roan.vercel.app/img/site-hsc.jpg</image:loc></image:image>
+    <image:image><image:loc>https://roots-ai-roan.vercel.app/img/site-rallytics.jpg</image:loc></image:image>
+    <image:image><image:loc>https://roots-ai-roan.vercel.app/img/site-ghost.jpg</image:loc></image:image>
   </url>
 </urlset>

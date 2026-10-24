@@ -4,14 +4,25 @@
   "trailingSlash": false,
   "redirects": [
     {
-      "source": "/:path*",
+      "source": "/",
       "has": [
         {
           "type": "host",
           "value": "roots-ai-roan.vercel.app"
         }
       ],
-      "destination": "https://www.rootssolution.tech/:path*",
+      "destination": "https://www.rootssolution.tech/",
+      "permanent": true
+    },
+    {
+      "source": "/:path+",
+      "has": [
+        {
+          "type": "host",
+          "value": "roots-ai-roan.vercel.app"
+        }
+      ],
+      "destination": "https://www.rootssolution.tech/:path+",
       "permanent": true
     }
   ],

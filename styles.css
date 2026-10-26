@@ -480,3 +480,7 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
 .notfound h1 { font-size: clamp(2.2rem, 6vw, 4.2rem); max-width: 14ch; }
 .notfound p { color: var(--dim); max-width: 32rem; }
 .notfound .ctas { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+
+/* Stack the phone and email cards neatly */
+.contact .head .call + .call { margin-top: 0.6rem; }
+.call span { overflow-wrap: anywhere; }

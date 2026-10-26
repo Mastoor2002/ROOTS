@@ -47,7 +47,7 @@
   // and the database itself validates every field and rate-limits repeat submissions.
   var SUPABASE_URL = 'https://twaklbsmvjiknisnrskt.supabase.co';
   var SUPABASE_KEY = 'sb_publishable__StLS2xJGENODyD2tu_L-Q_5kjuJwDF';
-  var WEB3FORMS_KEY = ''; // paste your Web3Forms access key here to get email copies
+  var WEB3FORMS_KEY = '645fd873-ac0d-4758-9635-7370d67c0059'; // Web3Forms form "Roots website contact form" -> rootssolution@rootssolution.tech
 
   var MIN_FILL_MS = 3000;          // bots submit instantly; people take a few seconds
   var COOLDOWN_MS = 60 * 1000;     // one submission per minute from the same browser
